@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {Link} from "react-router-dom"
 import styled from 'styled-components'
  import BurguerBtn from "./BtnBurguer";
  import gitHupIcone from "../assets/images/mark-github-24@2x.png";
@@ -23,9 +24,9 @@ function Navbar() {
       <NavContainer>
         <h2>Portfolio<span>  Julián Osorio</span></h2>
         <div className={`links ${clicked ? 'active' : ''}`}>
-          <a  href="#h">Inicio</a>
+          <a  href="#h"><Link to={"/"}>Inicio</Link></a>
           <a  href="#h">Curriculum vitae</a>
-          <a  href="#h">Contacto</a>
+          <a  href="#h"> <Link to={"/Contact"}>Contacto</Link></a>
           <img className="gitIconeImg" onClick={github} src={gitHupIcone} alt="" />
           <img className="gitIconeImg" onClick={linkedin} src={linkedinIcone} alt="" />
         </div>
